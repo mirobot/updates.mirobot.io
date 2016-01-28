@@ -22,7 +22,7 @@ def getLatest(type, prerelease)
             out[:assets] << asset['browser_download_url']
           end
         end
-        return out if out[:assets]
+        return out unless out[:assets].empty?
       end
     end
   end
